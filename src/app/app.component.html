@@ -1,0 +1,23 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div>
+  <h1>
+    Input that allow number, comma, Dot.
+  </h1>
+  <input
+    autocomplete="off"
+    autoCorrect="off"
+    type="text"
+    lang="en"
+    [formControl]="textInput"
+    placeholder="0.0"
+    minlength="{1}"
+    maxlength="{79}"
+    spellcheck="false"
+    (ngModelChange)="amountChanged($event)"
+    enterkeyhint="next"
+    step="1"
+  />
+  <div *ngIf="textInput?.errors?.pattern">
+    {{ textInput.errors | json }} Name is required.
+  </div>
+</div>
