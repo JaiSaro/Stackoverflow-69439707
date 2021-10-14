@@ -1,7 +1,7 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div>
   <h1>
-    Input that allow number, comma, Dot.
+    Input that allow only numbers.
   </h1>
   <input
     autocomplete="off"
@@ -17,7 +17,7 @@
     enterkeyhint="next"
     step="1"
   />
-  <div *ngIf="textInput?.errors?.pattern">
-    {{ textInput.errors | json }} Name is required.
+  <div class="text-danger mt-2" *ngIf="textInput?.errors?.pattern">
+    Invalid input type. Only numbers are allowed
   </div>
 </div>

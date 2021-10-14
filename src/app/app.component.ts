@@ -10,7 +10,7 @@ export class AppComponent {
   title = "CodeSandbox";
   textInput = new FormControl("", [
     Validators.required,
-    Validators.pattern("[0-9.,]*")
+    Validators.pattern("[0-9]*")
   ]);
 
   public amountChanged(event: any) {
